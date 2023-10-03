@@ -4,26 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFF00"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="toast"
+        android:text="@string/button_label_toast"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/design_default_color_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="showToast"
+        />
 
     <TextView
-        android:id="@+id/show_count"
+        android:id="@+id/count"
         android:layout_width="0dp"
-        android:layout_height="213dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:autoText="false"
+        android:background="#FFFF00"
         android:gravity="center_horizontal|center_vertical"
-        android:text="0"
+        android:text="@string/count_initial_value"
         android:textColor="@color/design_default_color_primary"
         android:textSize="160sp"
         android:textStyle="bold"
@@ -33,12 +39,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="count"
+        android:id="@+id/count"
+        android:layout_width="416dp"
+        android:layout_height="65dp"
+        android:text="@string/button_label_count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="667dp" />
+        tools:layout_editor_absoluteY="669dp"
+        android:onClick="countUp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
